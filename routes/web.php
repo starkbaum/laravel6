@@ -20,5 +20,8 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/test', function() {
-    return view('test');
+
+    return view('test', [
+        'name' => request('name'),
+    ]);
 });
